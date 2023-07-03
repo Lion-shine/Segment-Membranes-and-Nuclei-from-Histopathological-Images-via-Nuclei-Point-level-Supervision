@@ -14,7 +14,7 @@ If you find this code useful in your research, please cite our work:
     title = "Segment Membranes and Nuclei from HistopathologicalImages via Nuclei Point-level Supervision",
     booktitle = "Medical Image Computing and Computer Assisted Intervention -- MICCAI 2023",
     year = "2023",
-    pages = "???",
+    pages = "undetermined",
 }
 ```
 
@@ -44,7 +44,7 @@ The position information refers to the coordinate of centroid of cells, while th
 
 As an example from our dataset, we visualize the ground truth using colored-coordinates.
 In this visualization, red represents complete membrane, blue represents incomplete membrane, and green represents no membrane.
-
+You can refer to the `prepare_data.py` file for data preprocessing. In this project, the goal is to convert point annotations and images into dictionary format and then save them as .h5 files.
 
 | Image | ground truth |
 | -----|-----| 
@@ -53,6 +53,17 @@ In this visualization, red represents complete membrane, blue represents incompl
 
 
 ### Model training and test
+
+The code for this project was modified based on the repository at https://github.com/huiqu18/FullNet-varCE. It is recommended that future users also cite their article for reference.
+```
+@inproceedings{Qu2019miccai,
+    author = "Hui Qu, Zhennan Yan, Gregory M. Riedlinger, Subhajyoti De, and Dimitris N. Metaxas",
+    title = "Improving Nuclei/Gland Instance Segmentation in Histopathology Images by Full Resolution Neural Network and Spatial Constrained Loss",
+    booktitle = "Medical Image Computing and Computer Assisted Intervention -- MICCAI 2019",
+    year = "2019",
+    pages = "378--386",
+}
+```
 To training a model, set related parameters in the file `options.py` and run `python train.py`
 
 To evaluate the trained model on the test set, set related parameters in the file `options.py` and run `python test.py`. 
