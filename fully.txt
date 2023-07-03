@@ -1,0 +1,3 @@
+Type	acc	iou	recall	precison	F1	performance
+membrane	0.9688	0.7096	0.9344	0.7390	0.8068	0.9520
+nuclei	0.9776	0.5173	0.9394	0.5413	0.6648	0.9593
